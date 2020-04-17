@@ -1,0 +1,6 @@
+HLL-> Pure HLL          					g++  -E  file.cpp
+Pure HLL--->Assembly lang 				g++  -S  file.cpp
+Assembly lang--> Machine Code(Reloc.)        g++ -c   file.cpp
+Machine code(Reloc.)---> Machine	                 g++  -O file.cpp  (a.out)
+									./a.out
+**Replace g++ with gcc in case of .c file.
