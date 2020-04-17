@@ -1,0 +1,93 @@
+var arr=[1,5,47,10,5,62,44,10,8];
+undefined
+arr;
+(9) [1, 5, 47, 10, 5, 62, 44, 10, 8]0: 11: 52: 473: 104: 55: 626: 447: 108: 8length: 9__proto__: Array(0)
+arr.push(4,2);
+11
+arr;
+(11) [1, 5, 47, 10, 5, 62, 44, 10, 8, 4, 2]
+arr.pop()
+2
+arr;
+(10) [1, 5, 47, 10, 5, 62, 44, 10, 8, 4]0: 11: 52: 473: 104: 55: 626: 447: 108: 89: 4length: 10__proto__: Array(0)
+arr.splice(4,3);
+(3) [5, 62, 44]
+arr;
+(7) [1, 5, 47, 10, 10, 8, 4]
+function print(e){
+console.log(e);
+}
+undefined
+arr.forEach(print);
+VM2174:2 1
+VM2174:2 5
+VM2174:2 47
+VM2174:2 10
+VM2174:2 10
+VM2174:2 8
+VM2174:2 4
+undefined
+arr.forEach(ele=>console.log("ele is ",ele);
+VM2540:1 Uncaught SyntaxError: missing ) after argument list
+arr.forEach(ele=>console.log("ele is "+ele);
+VM2569:1 Uncaught SyntaxError: missing ) after argument list
+arr.forEach(ele=>console.log("ele is ",ele));
+VM2613:1 ele is  1
+VM2613:1 ele is  5
+VM2613:1 ele is  47
+VM2613:1 ele is  10
+VM2613:1 ele is  10
+VM2613:1 ele is  8
+VM2613:1 ele is  4
+undefined
+arr;
+(7) [1, 5, 47, 10, 10, 8, 4]
+arr.find(ele=>ele=8);
+1
+a= arr.findIndex(ele=>ele=8);
+0
+a;
+0
+a= arr.find(ele=>ele=8);
+1
+a;
+1
+a= arr.find(ele=>ele==8);
+8
+a;
+8
+a= arr.find(8);
+VM3152:1 Uncaught TypeError: 8 is not a function
+    at Array.find (<anonymous>)
+    at <anonymous>:1:8
+(anonymous) @ VM3152:1
+a= arr.find(ele=>ele=8);
+1
+a= arr.find(ele=>ele=11);
+1
+a= arr.find(ele=>ele=10);
+1
+arr.filter(y=>y=10);
+(7) [1, 5, 47, 10, 10, 8, 4]
+arr;
+(7) [1, 5, 47, 10, 10, 8, 4]
+arr.filter(y=>y==10);
+(2) [10, 10]0: 101: 10length: 2__proto__: Array(0)
+arr.filter(y=>y==8);
+[8]
+arr.filter(y=>y>8);
+(3) [47, 10, 10]
+arr.filter(y=>y>3);
+(6) [5, 47, 10, 10, 8, 4]
+arr.map(ele=>"Rs." +ele+".00");
+(7) ["Rs.1.00", "Rs.5.00", "Rs.47.00", "Rs.10.00", "Rs.10.00", "Rs.8.00", "Rs.4.00"]
+arr.sort((a,b)=>a-b);
+(7) [1, 4, 5, 8, 10, 10, 47]
+arr.sort((a,b)=>b-a);
+(7) [47, 10, 10, 8, 5, 4, 1]
+arr.reduce((sum,ele)=>sum+=ele,sum=0);
+85
+arr.reduce((mul,ele)=>sum*=ele,mul=1);
+0
+arr.reduce((mul,ele)=>mul*=ele,mul=1);
+752000

@@ -1,0 +1,108 @@
+var obj={
+id:11,
+    name:"Ram",
+salary:99999}
+undefined
+obj;
+{id: 11, name: "Ram", salary: 99999}
+obj.name
+"Ram"
+function createEmployee(id,name,salary){
+var obj={},
+obj.id=id;
+obj.name=name;
+obj.salary=salary;
+return obj;
+}
+VM4968:3 Uncaught SyntaxError: Unexpected token '.'
+function createEmployee(id,name,salary){
+var obj={};
+obj.id=id;
+obj.name=name;
+obj.salary=salary;
+return obj;
+}
+undefined
+var ram=createEmployee(11,"ram",9999);
+undefined
+ram;
+{id: 11, name: "ram", salary: 9999}
+shyam=createEmployee(45,"shyam",449494);
+{id: 45, name: "shyam", salary: 449494}
+shyam;
+{id: 45, name: "shyam", salary: 449494}
+function createEmployee(id,name,salary){
+this.id=id;
+this.name=name;
+this.salary=salary;
+
+}
+undefined
+var aman= new createEmployee(51,"aman",444848);
+undefined
+aman;
+createEmployee {id: 51, name: "aman", salary: 444848}id: 51name: "aman"salary: 444848__proto__: constructor: ƒ createEmployee(id,name,salary)length: 3name: "createEmployee"arguments: nullcaller: nullprototype: {constructor: ƒ}__proto__: ƒ ()[[FunctionLocation]]: VM5402:1[[Scopes]]: Scopes[1]__proto__: Object
+aman.name;
+"aman"
+createEmployee.prototype.print=function(){
+console.log(`id is ${this.id} and name is ${this.name} and your salary is ${this.salary}`);
+}
+ƒ (){
+console.log(`id is ${this.id} and name is ${this.name} and your salary is ${this.salary}`);
+}
+ram;
+{id: 11, name: "ram", salary: 9999}id: 11name: "ram"salary: 9999__proto__: Objectconstructor: ƒ Object()__defineGetter__: ƒ __defineGetter__()__defineSetter__: ƒ __defineSetter__()hasOwnProperty: ƒ hasOwnProperty()__lookupGetter__: ƒ __lookupGetter__()__lookupSetter__: ƒ __lookupSetter__()isPrototypeOf: ƒ isPrototypeOf()propertyIsEnumerable: ƒ propertyIsEnumerable()toString: ƒ toString()valueOf: ƒ valueOf()toLocaleString: ƒ toLocaleString()get __proto__: ƒ __proto__()set __proto__: ƒ __proto__()
+rishu=createEmployee(12,"rishu",549777);
+undefined
+rishu;
+undefined
+rishu=new createEmployee(12,"rishu",549777);
+createEmployee {id: 12, name: "rishu", salary: 549777}
+rishu;
+createEmployee {id: 12, name: "rishu", salary: 549777}id: 12name: "rishu"salary: 549777__proto__: print: ƒ ()constructor: ƒ createEmployee(id,name,salary)__proto__: Object
+rishu.print();
+VM6068:2 id is 12 and name is rishu and your salary is 549777
+undefined
+class Employee{
+constructor(id,name,salay){
+this.id=id;
+this.name=name;
+    this.salary=salary;}
+
+print(){
+console.log("I am print function");}}
+undefined
+a=new Employee(114,"a",787845);
+Employee {id: 114, name: "a", salary: 549777}
+a;
+Employee {id: 114, name: "a", salary: 549777}
+a.print();
+VM6982:8 I am print function
+undefined
+class A{
+constructor(x,y){
+this.x=x;
+this.y=y;
+}
+show(){
+console.log(`I am A class print ${this.x} and ${this.y}`);
+}
+}
+undefined
+class B extends A{
+constructor(z){
+super(100,200);
+this.z=z;}
+print(){
+super.show();
+this.z=this.x+this.y;
+console.log("B class",this.z);
+}
+}
+undefined
+b=new B(4);
+B {x: 100, y: 200, z: 4}
+b.print();
+VM7566:7 I am A class print 100 and 200
+VM8155:8 B class 300
+undefined

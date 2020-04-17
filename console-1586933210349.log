@@ -1,0 +1,109 @@
+add();
+function add(){
+console.log("hi");}
+VM7532:3 hi
+undefined
+add();
+add=function(){
+console.log("hi");}
+VM7532:3 hi
+ƒ (){
+console.log("hi");}
+hello();
+hello=function(){
+console.log("HI");}
+VM7729:1 Uncaught ReferenceError: hello is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM7729:1
+function order(){
+var x=100;
+var add=function(){
+console.log("order added");
+}
+var print=function(){
+console.log("Order placed");
+}
+}
+undefined
+function order(){
+var x=100;
+var add=function(){
+console.log("order added");
+}
+var print=function(){
+console.log("Order placed");
+}
+return [add,print];
+}
+undefined
+order();
+(2) [ƒ, ƒ]0: ƒ ()1: ƒ ()length: 2__proto__: Array(0)
+order()[0]();
+VM8194:4 order added
+undefined
+order()[1]();
+VM8194:7 Order placed
+undefined
+var b=order();
+undefined
+b[0];
+ƒ (){
+console.log("order added");
+}
+b[0]();
+VM8194:4 order added
+undefined
+b[1]();
+VM8194:7 Order placed
+undefined
+function order(){
+var x=100;
+var add=function add(){
+console.log("order added");
+}
+var print=function print(){
+console.log("Order placed");
+}
+return [add,print];
+}
+undefined
+order();
+(2) [ƒ, ƒ]0: ƒ add()1: ƒ print()length: 2__proto__: Array(0)
+function order(){
+var x=100;
+var add=function add(){
+console.log("order added");
+}
+var print=function print(){
+console.log("Order placed");
+}
+return {"addorder":add,"printorder":print};
+}
+undefined
+order();
+{addorder: ƒ, printorder: ƒ}addorder: ƒ add()printorder: ƒ print()__proto__: Object
+function add(){
+console.log("add called");
+}
+undefined
+add();
+VM8882:2 add called
+undefined
+var add=function(){
+console.log("Add called")}
+undefined
+add();
+VM9046:2 Add called
+undefined
+var add=()=>console.log("Arrow function");
+undefined
+add();
+VM9218:1 Arrow function
+undefined
+var add=()=>{
+console.log("Arrow function");
+}
+undefined
+add();
+VM9296:2 Arrow function
+undefined
